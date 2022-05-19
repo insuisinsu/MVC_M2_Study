@@ -1,80 +1,83 @@
 package model2.mvcboard;
 
 public class MVCBoardDTO {
-	//DB의 컬럼의 값을 저장하고 전송해주는 역할
+	//DB의 컬럼의 값을 저장하고 전송해 주는 역활  
 	
-	private String idx;
-	private String name;
-	private String title;
-	private String content;
-	private java.sql.Date postdate;
-	private String ofile;
-	private String sfile;
-	private int downcount;
-	private String pass;
+	private String idx; 
+	private String name; 
+	private String title; 
+	private String content; 
+	private java.sql.Date postdate; 
+	private String ofile; 
+	private String sfile; 
+	private int downcount; 
+	private String pass; 
 	private int visitcount;
-	String getIdx() {
+	
+	// getter, setter  생성
+	public String getIdx() {
 		return idx;
 	}
-	void setIdx(String idx) {
+	public void setIdx(String idx) {
 		this.idx = idx;
 	}
-	String getName() {
+	public String getName() {
 		return name;
 	}
-	void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
-	String getTitle() {
+	public String getTitle() {
 		return title;
 	}
-	void setTitle(String title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
-	String getContent() {
+	public String getContent() {
 		return content;
 	}
-	void setContent(String content) {
+	public void setContent(String content) {
 		this.content = content;
 	}
-	java.sql.Date getPostdate() {
+	public java.sql.Date getPostdate() {
 		return postdate;
 	}
-	void setPostdate(java.sql.Date postdate) {
+	public void setPostdate(java.sql.Date postdate) {
 		this.postdate = postdate;
 	}
-	String getOfile() {
+	public String getOfile() {
 		return ofile;
 	}
-	void setOfile(String ofile) {
+	public void setOfile(String ofile) {
 		this.ofile = ofile;
 	}
-	String getSfile() {
+	public String getSfile() {
 		return sfile;
 	}
-	void setSfile(String sfile) {
+	public void setSfile(String sfile) {
 		this.sfile = sfile;
 	}
-	int getDowncount() {
+	public int getDowncount() {
 		return downcount;
 	}
-	void setDowncount(int downcount) {
+	public void setDowncount(int downcount) {
 		this.downcount = downcount;
 	}
-	String getPass() {
+	public String getPass() {
 		return pass;
 	}
-	void setPass(String pass) {
+	public void setPass(String pass) {
 		this.pass = pass;
 	}
-	int getVisitcount() {
+	public int getVisitcount() {
 		return visitcount;
 	}
-	void setVisitcount(int visitcount) {
+	public void setVisitcount(int visitcount) {
 		this.visitcount = visitcount;
-	}
+	} 
 	
-	//getter, setter 생성
+ 
 	
 	
+
 }

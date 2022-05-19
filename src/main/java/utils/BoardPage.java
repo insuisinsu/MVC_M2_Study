@@ -5,23 +5,23 @@ public class BoardPage {
             int pageNum, String reqUrl) {
         String pagingStr = "";
 
-        // ë‹¨ê³„ 3 : ì „ì²´ í˜ì´ì§€ ìˆ˜ ê³„ì‚°
+        // ´Ü°è 3 : ÀüÃ¼ ÆäÀÌÁö ¼ö °è»ê
         int totalPages = (int) (Math.ceil(((double) totalCount / pageSize)));
 
-        // ë‹¨ê³„ 4 : 'ì´ì „ í˜ì´ì§€ ë¸”ë¡ ë°”ë¡œê°€ê¸°' ì¶œë ¥
+        // ´Ü°è 4 : 'ÀÌÀü ÆäÀÌÁö ºí·Ï ¹Ù·Î°¡±â' Ãâ·Â
         int pageTemp = (((pageNum - 1) / blockPage) * blockPage) + 1;
         if (pageTemp != 1) {
-            pagingStr += "<a href='" + reqUrl + "?pageNum=1'>[ì²« í˜ì´ì§€]</a>";
+            pagingStr += "<a href='" + reqUrl + "?pageNum=1'>[Ã¹ ÆäÀÌÁö]</a>";
             pagingStr += "&nbsp;";
             pagingStr += "<a href='" + reqUrl + "?pageNum=" + (pageTemp - 1)
-                         + "'>[ì´ì „ ë¸”ë¡]</a>";
+                         + "'>[ÀÌÀü ºí·Ï]</a>";
         }
 
-        // ë‹¨ê³„ 5 : ê° í˜ì´ì§€ ë²ˆí˜¸ ì¶œë ¥
+        // ´Ü°è 5 : °¢ ÆäÀÌÁö ¹øÈ£ Ãâ·Â
         int blockCount = 1;
         while (blockCount <= blockPage && pageTemp <= totalPages) {
             if (pageTemp == pageNum) {
-                // í˜„ì¬ í˜ì´ì§€ëŠ” ë§í¬ë¥¼ ê±¸ì§€ ì•ŠìŒ
+                // ÇöÀç ÆäÀÌÁö´Â ¸µÅ©¸¦ °ÉÁö ¾ÊÀ½
                 pagingStr += "&nbsp;" + pageTemp + "&nbsp;";
             } else {
                 pagingStr += "&nbsp;<a href='" + reqUrl + "?pageNum=" + pageTemp
@@ -31,13 +31,13 @@ public class BoardPage {
             blockCount++;
         }
 
-        // ë‹¨ê³„ 6 : 'ë‹¤ìŒ í˜ì´ì§€ ë¸”ë¡ ë°”ë¡œê°€ê¸°' ì¶œë ¥
+        // ´Ü°è 6 : '´ÙÀ½ ÆäÀÌÁö ºí·Ï ¹Ù·Î°¡±â' Ãâ·Â
         if (pageTemp <= totalPages) {
             pagingStr += "<a href='" + reqUrl + "?pageNum=" + pageTemp
-                         + "'>[ë‹¤ìŒ ë¸”ë¡]</a>";
+                         + "'>[´ÙÀ½ ºí·Ï]</a>";
             pagingStr += "&nbsp;";
             pagingStr += "<a href='" + reqUrl + "?pageNum=" + totalPages
-                         + "'>[ë§ˆì§€ë§‰ í˜ì´ì§€]</a>";
+                         + "'>[¸¶Áö¸· ÆäÀÌÁö]</a>";
         }
 
         return pagingStr;

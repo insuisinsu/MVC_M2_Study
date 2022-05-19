@@ -83,15 +83,35 @@
   	<url-pattern>/mvcboard/list.do</url-pattern>
   </servlet-mapping>
   
+    <!-- MVCBoard 글 내용 보기 Controller 매핑-->
+  <servlet>
+  	<servlet-name>MVCBoardView</servlet-name>
+  	<servlet-class>model2.mvcboard.ViewController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MVCBoardView</servlet-name>
+  	<url-pattern>/mvcboard/view.do</url-pattern>
+  </servlet-mapping>
+  
   <!-- 페이징 처리를 위한 설정 (변수값 할당) -->
   <context-param>
   	<param-name>POSTS_PER_PAGE</param-name>
-  	<param-value>10</param-value>	
+  	<param-value>2</param-value>	
   </context-param>
   <context-param>
   	<param-name>PAGES_PER_BLOCK</param-name>
   	<param-value>5</param-value>	
   </context-param>
+  
+      <!-- MVCBoard 글 수정/삭제 Controller 매핑-->
+  <servlet>
+  	<servlet-name>MVCBoardPass</servlet-name>
+  	<servlet-class>model2.mvcboard.PassController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MVCBoardPass</servlet-name>
+  	<url-pattern>/mvcboard/pass.do</url-pattern>
+  </servlet-mapping>
   
   
 </web-app>

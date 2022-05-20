@@ -84,6 +84,7 @@
   </servlet-mapping>
   
     <!-- MVCBoard 글 내용 보기 Controller 매핑-->
+    <!-- 어노테이션 @WebSerlet("/mvcboard/view.do")
   <servlet>
   	<servlet-name>MVCBoardView</servlet-name>
   	<servlet-class>model2.mvcboard.ViewController</servlet-class>
@@ -92,6 +93,8 @@
   	<servlet-name>MVCBoardView</servlet-name>
   	<url-pattern>/mvcboard/view.do</url-pattern>
   </servlet-mapping>
+  -->
+  
   
   <!-- 페이징 처리를 위한 설정 (변수값 할당) -->
   <context-param>
@@ -104,6 +107,7 @@
   </context-param>
   
       <!-- MVCBoard 글 수정/삭제 Controller 매핑-->
+  <!--
   <servlet>
   	<servlet-name>MVCBoardPass</servlet-name>
   	<servlet-class>model2.mvcboard.PassController</servlet-class>
@@ -112,6 +116,12 @@
   	<servlet-name>MVCBoardPass</servlet-name>
   	<url-pattern>/mvcboard/pass.do</url-pattern>
   </servlet-mapping>
+  -->
   
+  <!-- 첨부파일의 최대 용량 설정 (1Mbyte)-->
+  <context-param>
+  	<param-name>maxPostSize</param-name>
+  	<param-value>1024000</param-value>
+  </context-param>
   
 </web-app>

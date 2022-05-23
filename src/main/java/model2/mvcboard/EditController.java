@@ -102,7 +102,7 @@ public class EditController extends HttpServlet{
 			dto.setSfile(newFilename);	//새로운 파일이름(서버에 저장될 파일이름)
 			
 			//기존 파일 삭제
-			FileUtil.deletefile(req, "/Uploads", prevSfile);
+			FileUtil.deleteFile(req, "/Uploads", prevSfile);
 
 		}else { 	//첨부파일이 존재하지 않으면 기존의 이름 유지
 			dto.setOfile(prevOfile);

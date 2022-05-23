@@ -29,12 +29,12 @@
   
   <context-param>
   	<param-name>OracleId</param-name>
-  	<param-value>hr2</param-value>
+  	<param-value>hr</param-value>
   </context-param>
   
   <context-param>
   	<param-name>OraclePwd</param-name>
-  	<param-value>1234</param-value>
+  	<param-value>hr</param-value>
   </context-param>
   
   <!-- 세션 유지 기간 설정 (20분 동안 세션 유지) -->
@@ -118,10 +118,10 @@
   </servlet-mapping>
   -->
   
-  <!-- 첨부파일의 최대 용량 설정 (1Mbyte)-->
+  <!-- 첨부파일의 최대 용량 설정 (100Mbyte)-->
   <context-param>
   	<param-name>maxPostSize</param-name>
-  	<param-value>1024000</param-value>
+  	<param-value>102400000</param-value>
   </context-param>
   
 </web-app>

@@ -20,7 +20,7 @@
 	
 	<!--  게시글 정보 출력 	 -->
 	<tr> 
-		<td>번호 </td>	<td> ${dto.idx }</td>
+		<td>번호 </td>	<td> ${dto.num }</td>
 		<td>작성자 </td>	<td>${dto.name} </td>
 	</tr>
 	
@@ -38,14 +38,6 @@
 	
 	<tr>
 		<td>첨부파일 </td>
-		<td> 
-			<c:if test= "${not empty dto.ofile}"> 
-			${dto.ofile }
-			<a href = "../mvcboard/download.do?ofile=${dto.ofile}&sfile=${dto.sfile}&idx=${dto.idx}">
-				[다운로드]
-			</a>
-			</c:if>
-		</td>
 		<td>
 			다운로드수
 		</td>
@@ -57,9 +49,9 @@
 	<!--  하단 메뉴 버튼  -->
 	<tr>
 		<td colspan = "4" align ="center"> 
-			<button type ="button" onclick = "location.href='../mvcboard/pass.do?mode=edit&idx=${param.idx}';">수정하기</button>
-			<button type = "button" onclick = "location.href='../mvcboard/pass.do?mode=delete&idx=${param.idx }';">삭제하기</button>
-			<button type = "button" onclick = "location.href='../mvcboard/list.do';">목록 바로가기</button>					
+			<%-- <button type ="button" onclick = "location.href='../freeboard/pass.do?mode=edit&num=${param.num}';">수정하기</button>
+			<button type = "button" onclick = "location.href='../freeboard/pass.do?mode=delete&num=${param.num }';">삭제하기</button> --%>
+			<button type = "button" onclick = "location.href='../freeboard/list.do';">목록 바로가기</button>					
 		</td> 	
 	</tr>
 	
